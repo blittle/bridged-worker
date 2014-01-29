@@ -1,0 +1,23 @@
+{
+  "name": "bridged-worker",
+  "main": "bridged-worker.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/blittle/bridged-worker",
+  "authors": [
+    "Daniel Monson"
+  ],
+  "description": "BridgedWorker is a function that makes communication between worker and main thread simple. It also means you can keep all related code in the same file, which is convenient.",
+  "keywords": [
+    "worker",
+    "web",
+    "worker"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
