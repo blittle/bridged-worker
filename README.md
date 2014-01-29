@@ -7,10 +7,10 @@ BridgedWorker is a function that makes communication between worker and main thr
 ```javascript
 BuildBridgedWorker = function(workerFunction,workerExportNames,mainExportNames,mainExportHandles)
 ```
-**workerFunction** is a function, the interior of which will be turned into a string and used as a worker
-**workerExportNames** should be an array of string function names available to main 
-**mainExportNames** should be an array of string function names available to worker
-**mainExportHandles** should be an array of the actual functions corresponding to the functions in main for both Names arrays, if the function name ends in an asterisk it means that the last argument passed is going to be an array of ArrayBuffers
+ - **workerFunction** is a function, the interior of which will be turned into a string and used as a worker
+ - **workerExportNames** should be an array of string function names available to main 
+ - **mainExportNames** should be an array of string function names available to worker
+ - **mainExportHandles** should be an array of the actual functions corresponding to the functions in main for both Names arrays, if the function name ends in an asterisk it means that the last argument passed is going to be an array of ArrayBuffers
 
 The result of all this work is that inside the worker we can call main.SomeMainFunction(thing,otherthing,more,[buffer1,buffer2]) and in main we can call myWorker. `SomeWorkerFunction(hello,world,[buffer1,buffer2])`
 
