@@ -19,12 +19,12 @@ The result of all this work is that inside the worker we can call main.SomeMainF
 var workerCode = function () {
     "use strict;" //this will become the first line of the worker
 
-    CalculateSomething(a, b, c, d) {
+    function CalculateSomething(a, b, c, d) {
         var v = a + b + c + d; //trivial calculation
         main.DisplayResult(v, "hello");
     }
 
-    CalculateSomethingBig(buff, d) {
+    function CalculateSomethingBig(buff, d) {
         var v = new Uint32Array(buff);
         for (var i = 0; i <= v.length; i++) {
             v[i] /= d;
